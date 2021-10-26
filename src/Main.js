@@ -30,8 +30,8 @@ export default function Main(props) {
             <span className="text-gray-700">Category</span>
             <select ref={category}
               className="form-select mt-1 block">
-              <option value="Mythology">Mythology</option>
-              <option value="Video Games">Video Games</option>
+              <option value="23">Mythology</option>
+              <option value="15">Video Games</option>
             </select>
           </label>
           <button onClick={() => onClick()} className="text-5xl float-right -mt-2" >
