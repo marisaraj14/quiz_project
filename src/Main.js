@@ -1,5 +1,5 @@
-
-export default function SAMPLE(){
+import { Router, Link } from "@reach/router"
+export default function Main(){
     return(
       <div className="SAMPLE">
         <img src="https://i.ibb.co/CK33Rbm/image-1-removebg-preview.png" class="animate-wiggle object-scale-down h-48 w-full mb-0 mt-32"

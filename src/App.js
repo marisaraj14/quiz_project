@@ -7,11 +7,13 @@ import { Router, Link } from "@reach/router";
 import Mythology from './Mythology';
 import VideoGames from './VideoGames';
 import Arts from './Arts';
-import SAMPLE from './SAMPLE';
+import Main from './Main';
 
 export default function App(){
 return(
- <SAMPLE/>
+  <Router>
+    <Main path="/" />
+  </Router>
 );
 }
 
