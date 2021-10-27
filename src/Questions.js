@@ -8,7 +8,6 @@ export default function Questions(props) {
     const url = "https://opentdb.com/api.php?amount=10&category=" + props.user.category + "&difficulty=easy&type=boolean";
 
     useEffect(() => {
-
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
@@ -20,29 +19,28 @@ export default function Questions(props) {
                 console.log("error", error);
             }
         };
-
         fetchData();
     }, [props.user.category]);
 
 
     function nextQues() {
-        setQuesIndex(c=> c + 1);
-        console.log(quesIndex);
+        if (quesIndex ==9 ) {
+
+        } else {
+            setQuesIndex(c=> c + 1);
+        }
     }
 
-    function onSubmit() {
-
+    if (quiz==null) {
+        return "Loading...";
+    } else {
+        return (<>
+            {(quesIndex+1)+". " + quiz[quesIndex].question}
+            <br />
+            <button id="nextQues" onClick={nextQues}> {quesIndex <9? "Next": "Submit"}</button> 
+        </>);
     }
-    return (
-        <>
-            {quiz==null? "Loading..." : quiz[quesIndex].question}
-            <br />
-            {quesIndex <9 ? <button id="nextQues" onClick={nextQues}>Next Question</button> : <p>You're Done</p>}
-            <br />
-            <input type="Submit" onClick="onSubmit"> Submit Answer</input>
-
-        </>
-    );
+ 
     //         // fetch api using props.user.category
     //         // result set in a state variable.
     //         // have a question index
