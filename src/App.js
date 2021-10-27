@@ -9,13 +9,14 @@ import Main from './Main';
 export default function App(){
   const [user, setUser] = React.useState({
     username: "",
-    category: ""
+    category: "",
+    answers: []
   });
   
 return(
   <Router>
-    <Main user ={user} setUser={setUser}  path="/" />
-    <Questions user={user} path="/Questions" />
+    <Main user={user} setUser={setUser} path="/" />
+    <Questions user={user} setUser={setUser} path="/Questions" />
   </Router>
   );
 }
