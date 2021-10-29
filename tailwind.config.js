@@ -17,6 +17,10 @@ module.exports = {
             },
         }
     },
+    colors:{
+      orange:'#F5B32F'
+    },
+
     animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
     }
