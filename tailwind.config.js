@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'press-start': ['"Press Start 2P"', 'cursive'],
-        'TheGoodMonolith' : ['TheGoodMonolith']
+        'TheGoodMonolith' : ['TheGoodMonolith'],
+        'chakra':['Chakra Petch']
       },
       keyframes: {
         wiggle: {
@@ -18,7 +19,11 @@ module.exports = {
         }
     },
     colors:{
-      orange:'#F5B32F'
+      orange:'#F5B32F',
+      pineGreen: '#519075',
+      red: '#E23C57',
+      rosyBrown: '#E788A6',
+      appleGreen: '#6BBF59'
     },
 
     animation: {

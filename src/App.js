@@ -1,22 +1,23 @@
 import './App.css';
 
 import React from "react";
-import { render } from "react-dom";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import Questions from './Questions';
 import Main from './Main';
+import ResultScreen from './ResultScreen';
 
 export default function App(){
   const [user, setUser] = React.useState({
     username: "",
     category: "",
-    answers: []
+    totalScore:0
   });
   
 return(
   <Router>
     <Main user={user} setUser={setUser} path="/" />
     <Questions user={user} setUser={setUser} path="/Questions" />
+    <ResultScreen user={user} setUser={setUser} path="/ResultScreen"/>
   </Router>
   );
 }
