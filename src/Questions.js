@@ -36,7 +36,7 @@ export default function Questions(props) {
             console.log(props.user);
             setResult({ ...result, answerSelected: 1 });
             //props.user.totalScore + 1
-            props.setUser({ ...props.user, totalScore: 13 });
+            props.setUser({ ...props.user, totalScore: props.user.totalScore + 1 });
         }
     }
 
@@ -74,19 +74,20 @@ export default function Questions(props) {
                 <h1 className="text-yellow-700 mt-10 text-4xl font-chakra font-black row-start-1 row-span-2 col-start-1 col-span-5 " 
                  dangerouslySetInnerHTML={{ __html: (quesIndex + 1) + ". " + quiz[quesIndex].question }} />
                 {/* True */}
-                <button id="1" className="row-start-3 col-start-2 col-span-3 py-4
-                bg-yellow-400 rounded-md text-5xl font-TheGoodMonolith text-white font-bold
-                hover:bg-yellow-300  focus:outline-none focus:ring-4 focus:ring-pink-500"
+                <button id="1" className={result.answerSelected===null?"row-start-3 col-start-2 col-span-3 py-4 bg-yellow-400 rounded-md text-5xl font-TheGoodMonolith text-white font-bold hover:bg-yellow-300  focus:outline-none focus:ring-4 focus:ring-pink-500":
+                quiz[quesIndex].correct_answer==="True"?
+                "row-start-3 col-start-2 col-span-3 py-4 text-5xl text-white font-bold bg-pineGreen font-TheGoodMonolith rounded-md":  
+                "row-start-3 col-start-2 col-span-3 py-4 text-5xl text-white font-bold bg-red opacity-80 font-TheGoodMonolith rounded-md"}
                     onClick={() => {
                         checkAnswer("True");
                     }} disabled={result.answerSelected != null}>
                     True
                 </button>
-
                 {/* False */}
-                <button id="0" className="row-start-4 col-start-2 col-span-3 
-                text-5xl text-white font-bold bg-yellow-500 font-TheGoodMonolith rounded-md 
-                bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-pink-500"
+                <button id="0" className={result.answerSelected===null?"row-start-4 col-start-2 col-span-3 text-5xl text-white font-bold bg-yellow-500 font-TheGoodMonolith rounded-md bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-pink-500":
+                quiz[quesIndex].correct_answer==="False"?
+                "row-start-4 col-start-2 col-span-3 text-5xl text-white font-bold bg-pineGreen font-TheGoodMonolith rounded-md":  
+                "row-start-4 col-start-2 col-span-3 text-5xl text-white font-bold bg-red opacity-8s0	font-TheGoodMonolith rounded-md"}
                     onClick={() => {
                         checkAnswer("False");
                     }} disabled={result.answerSelected != null}>
