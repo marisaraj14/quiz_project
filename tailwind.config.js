@@ -22,8 +22,8 @@ module.exports = {
       orange:'#F5B32F',
       pineGreen: '#519075',
       red: '#E23C57',
-      rosyBrown: '#E788A6',
-      appleGreen: '#6BBF59'
+      rosyBrown: '#AE989B',
+      appleGreen: '#6BCA3F'
     },
 
     animation: {
