@@ -16,7 +16,7 @@ export default function ResultScreen(props) {
                 alt="Celeberatory Eggs"
                 className="h-96 col-start-2 col-span-3 mt-10 content-center" />
             <p className="font-TheGoodMonolith col-start-1 text-6xl col-span-3 font-bold mt-8 text-white ">
-                Good Job {props.user.username} , you've scored {props.totalScore} /10!
+                Good Job {props.user.username} , you've scored {props.user.totalScore} /10!
             </p>
             <button
                 className="col-start-2 border-4 font-press-start animate-bounce border-yellow-100 

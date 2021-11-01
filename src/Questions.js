@@ -11,8 +11,7 @@ export default function Questions(props) {
     });
     const navigate = useNavigate();
 
-    // const url = "https://opentdb.com/api.php?amount=10&category=" + props.user.category + "&difficulty=easy&type=boolean";
-    const url = "https://opentdb.com/api.php?amount=10&category=" + "23" + "&difficulty=easy&type=boolean";
+    const url = "https://opentdb.com/api.php?amount=10&category=" + props.user.category + "&difficulty=easy&type=boolean";
 
     useEffect(() => {
         const fetchData = async () => {
