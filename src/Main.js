@@ -9,8 +9,14 @@ export default function Main(props) {
   const navigate = useNavigate();
 
   const onClick = function () {
-    setUser({ category: category.current.options[category.current.selectedIndex].value, username: username.current.value, totalScore: 0 },
-      navigate('/Questions'))
+    if(username.current.value){
+      setUser({ category: category.current.options[category.current.selectedIndex].value, username: username.current.value, totalScore: 0 },
+        navigate('/Questions'))
+    }
+    else{
+      alert("Kindly enter your name!");
+    }
+   
   }
 
   return (
@@ -22,7 +28,7 @@ export default function Main(props) {
         <p className="font-TheGoodMonolith text-3xl text-white font-bold">Um Hi, would you like me to quiz ya?</p>
         <input className="justify-self-center shadow appearance-none border-b-4 border-dashed border-white bg-transparent rounded w-2/4 py-2 px-6 mt-6 
             text-center text-white leading-tight hover:bg-yellow-400 placeholder-white placeholder-opacity-75 focus:outline-none focus:shadow-outline text-xl"
-          id="username" type="text" placeholder="Your name goes here."
+          type="text" placeholder="Your name goes here."
           ref={username} />
         {/* Drop Down Box */}
         <label className="mt-4 ">
