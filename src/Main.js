@@ -13,7 +13,6 @@ export default function Main(props) {
       navigate('/Questions'))
   }
 
-  console.log(username);
   return (
     <main>
       <img src="https://static.wikia.nocookie.net/gudetama-tap/images/b/ba/Fairy_Gudemother.png" className="animate-wiggle object-scale-down h-52  mx-auto mt-32"
@@ -33,7 +32,7 @@ export default function Main(props) {
             <option value="15">Video Games</option>
           </select>
         </label>
-        <button onClick={() => onClick()} className="text-5xl justify-self-end -mt-2" >
+        <button onClick={() => onClick()} className="text-5xl justify-self-end -mt-2">
           <i className='fa fa-play text-white animate-bounce hover:text-8xl'></i></button>
       </section>
     </main>);
